@@ -7,9 +7,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+// Class component
 export class App extends Component {
 
+  // Create state with person object, show boolean, intervalId and timeSinceMount
   constructor(props) {
     super(props);
     this.state = {
@@ -25,20 +26,24 @@ export class App extends Component {
     };
   }
 
+  // Component did mount function
   componentDidMount() {
     this.setState({ intervalId: setInterval(this.updateTimeSinceMount, 1000) });
   }
 
+  // Component will unmount function
   componentWillUnmount() {
     clearInterval(this.state.intervalId);
   }
 
+  // Update time since mount function 
   updateTimeSinceMount = () => {
     this.setState((prevState) => ({
       timeSinceMount: prevState.timeSinceMount + 1,
     }));
   };
 
+  // Handle toggle show button on click action
   handleToggleShow = () => {
     this.setState((prevState) => ({
       show: !prevState.show,
@@ -51,8 +56,11 @@ export class App extends Component {
 
     return (
       <div>
+
+        {/* Navbar component */}
         <NavBar />
 
+        {/* Toggle button and time since mount counter */}
         <Container>
           <Row>
             <Col md={2}></Col>
@@ -64,10 +72,9 @@ export class App extends Component {
           </Row>
         </Container>
 
-
+        {/* Show is true and render the div */}
         {show && (
           <div>
-
             <Container>
               <Row>
                 <Col md={2}></Col>
