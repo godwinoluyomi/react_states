@@ -1,8 +1,5 @@
-# React + Vite
+# REACT STATE MANAGEMENT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A classed based component that demonstrates react state management using the component lifecycle.
+It has a button that toggles the show state. When the show state is true, the person's profile will appear.
+It also has a field that shows the time interval since the last component was mounted.
